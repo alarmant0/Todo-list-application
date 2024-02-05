@@ -15,4 +15,4 @@ A simple console-based Todo list application in Python.
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/alarmant0/Todo-list-application-david-pinheiro
+   git clone https://github.com/alarmant0/Todo-list-application-david-pinheiro_CDOF1
