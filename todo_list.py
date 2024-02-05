@@ -19,10 +19,17 @@ class TodoList:
 
     def delete_task(self, task_index):
         if 1 <= task_index <= len(self.tasks):
-            deleted_task = self.tasks.pop(task_index - 1)
-            print(f"Task '{deleted_task.strip()}' deleted successfully.")
+            task_to_delete = self.tasks[task_index - 1].strip()
+            print(f"Task {task_index}: {task_to_delete}")
+            confirm = input("Are you sure you want to delete this task? (yes/no): ").lower()
+            if confirm == "yes":
+                deleted_task = self.tasks.pop(task_index - 1)
+                print(f"Task '{deleted_task.strip()}' deleted successfully.")
+            else:
+                print("Task deletion canceled.")
         else:
             print("Invalid task index.")
+
 
     def complete_task(self, task_index):
         if 1 <= task_index <= len(self.tasks):
