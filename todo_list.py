@@ -54,23 +54,27 @@ class TodoList:
 
             choice = input("Enter your choice (1-5): ")
 
-            if choice == "1":
-                self.display_tasks()
-            elif choice == "2":
-                new_task = input("Enter the new task: ")
-                self.add_task(new_task + "\n")
-            elif choice == "3":
-                task_index = int(input("Enter the task index to delete: "))
-                self.delete_task(task_index)
-            elif choice == "4":
-                task_index = int(input("Enter the task index to mark as complete: "))
-                self.complete_task(task_index)
-            elif choice == "5":
-                self.save_tasks()
-                print("Tasks saved. Exiting.")
-                break
-            else:
-                print("Invalid choice. Please enter a number between 1 and 5.")
+            try:
+                choice = int(choice)
+                if choice == "1":
+                    self.display_tasks()
+                elif choice == "2":
+                    new_task = input("Enter the new task: ")
+                    self.add_task(new_task + "\n")
+                elif choice == "3":
+                    task_index = int(input("Enter the task index to delete: "))
+                    self.delete_task(task_index)
+                elif choice == "4":
+                    task_index = int(input("Enter the task index to mark as complete: "))
+                    self.complete_task(task_index)
+                elif choice == "5":
+                    self.save_tasks()
+                    print("Tasks saved. Exiting.")
+                    break
+                else:
+                    print("Invalid choice. Please enter a number between 1 and 5.")
+            except ValueError:
+                print("Invalid input. Please enter a valid integer.")               
 
 if __name__ == "__main__":
     todo_list = TodoList()
