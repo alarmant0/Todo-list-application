@@ -28,20 +28,19 @@ The Todo List Application is a console-based task management tool. It allows use
 ### Prerequisites
 
 - Python 3.x
-- (Optional) Virtual environment
 
 ### Installation
 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/alarmant0/Todo-list-application-david-pinheiro_CDOF1.git
+   git clone https://github.com/alarmant0/Todo-list-application.git
    ```
 
 2. Navigate to the project directory:
 
    ```bash
-   cd Todo-list-application-david-pinheiro_CDOF1
+   cd Todo-list-application
    ```
 
 3. (Optional) Create and activate a virtual environment:
@@ -51,18 +50,12 @@ The Todo List Application is a console-based task management tool. It allows use
    source venv/bin/activate   # On Windows: .\venv\Scripts\activate
    ```
 
-4. Install dependencies:
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
 ## Usage
 
 1. Run the application:
 
    ```bash
-   python todo_app.py
+   python3 todo_list.py
    ```
 
 2. Follow the on-screen menu to interact with the Todo List.
